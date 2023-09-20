@@ -25,7 +25,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
-	ont i = 0;
+	int i = 0;
 
 	while (specifiers[i].specifier)
 	{
@@ -57,6 +57,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
  * get_flag - find flag func
  * @s: the string
  * @params: the parameter
+ *
  * Return: flag valid
 */
 
