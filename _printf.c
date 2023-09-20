@@ -17,7 +17,11 @@ int _printf(const char *format, ...)
 
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
+<<<<<<< HEAD
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
+=======
+	if (format[0] == '%' && format[1] == ' ' && !formate[2])
+>>>>>>> 92558415a4ce6df4e56a5dfcfd44794fe6ff3b9c
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{

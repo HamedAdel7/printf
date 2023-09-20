@@ -14,7 +14,7 @@ int print_from_to(char *start, char *stop, char *except)
 	while (start <= stop)
 	{
 		if (start != except)
-		sum += putchar (*start);
+			sum += _putchar(*start);
 		start++;
 	}
 	return (sum);
@@ -35,7 +35,7 @@ int print_rev(va_list ap, params_t *params)
 	if (str)
 	{
 		for (len = 0; *str; str++)
-		len++;
+			len++;
 		str--;
 		for (; len > 0; len--, str--)
 			sum += _putchar(*str);
@@ -43,19 +43,18 @@ int print_rev(va_list ap, params_t *params)
 	return (sum);
 }
 
-
 /**
  * print_rot13 - prints string in rot13
  * @ap: string
- * @params: the parameters struct
- *
- * Return: number bytes printed
+ * @params: the parameters
+ * Return: number bytes
 */
+
 int print_rot13(va_list ap, params_t *params)
 {
 	int i, index;
 	int count = 0;
-	char arr[] = "NOPQRSTUVWXYZABCDEFGHIJKLM   nopqrstuvwxyzabcdefghijklm";
+	char arr[] = "NOPQRSTUVWXYZABCDEFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;
 
