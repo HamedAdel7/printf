@@ -50,13 +50,8 @@ int print_HEX(va_list ap, params_t *params)
 	str = convert(l, 16, CONVERT_UNSIGNED, params);
 	if (params->hashtag_flag && l)
 	{
-<<<<<<< HEAD
 		*--str = 'X';
 		*--str = '0';
-=======
-		*--str == 'X';
-		*--str == '0';
->>>>>>> 92558415a4ce6df4e56a5dfcfd44794fe6ff3b9c
 	}
 	params->unsign = 1;
 	return (c += print_number(str, params));

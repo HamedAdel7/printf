@@ -35,11 +35,7 @@ int print_int(va_list ap, params_t *params)
 	if (params->l_modifier)
 		l = va_arg(ap, long);
 	else if (params->h_modifier)
-<<<<<<< HEAD
 		l = (short int)va_arg(ap, int);
-=======
-		l = (short int)va_arg(ap, int;
->>>>>>> 92558415a4ce6df4e56a5dfcfd44794fe6ff3b9c
 	else
 		l = (int)va_arg(ap, int);
 	return (print_number(convert(l, 10, 0, params), params));
