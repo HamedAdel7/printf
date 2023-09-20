@@ -20,7 +20,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
-		n = num;
+		n = -num;
 		sign = '-';
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
@@ -53,9 +53,9 @@ int print_unsigned(va_list ap, params_t *params)
 	else if (params->h_modifier)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
-		l = (unsigned int)va_arg(ap, unsinged int);
+		l = (unsigned int)va_arg(ap, unsigned int);
 	params->unsign = 1;
-	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params0));
+	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**
