@@ -26,6 +26,7 @@ int print_from_to(char *start, char *stop, char *except)
  *
  * Return: number bytes printed
  */
+
 int print_rev(va_list ap, params_t *params)
 {
 	int len, sum = 0;
@@ -39,6 +40,11 @@ int print_rev(va_list ap, params_t *params)
 		str--;
 		for (; len > 0; len--, str--)
 			sum += _putchar(*str);
+	}
+	else
+	{
+		_putchar('%');
+		_putchar('r');
 	}
 	return (sum);
 }
